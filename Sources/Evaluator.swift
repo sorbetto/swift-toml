@@ -48,7 +48,7 @@ class Evaluator {
 
         if let m = content.match(self.regex, options: options) {
             token = try self.generator(m)
-            index = content.index(content.startIndex, offsetBy: m.characters.count)
+            index = content.index(content.startIndex, offsetBy: m.count)
             return (token, index)
         }
 
